@@ -8,7 +8,6 @@ from tqdm import tqdm
 from baseModelFusionNet import AttentionWeightNet
 
 import sys
-sys.path.append('.')
 from models.team00_DAT import DAT
 from models.team00_RFDN import RFDN
 from models.team00_SwinIR import SwinIR
