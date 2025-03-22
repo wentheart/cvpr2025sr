@@ -21,6 +21,5 @@ The test output image that has been submitted to Codalab can be downloaded from 
 wget https://github.com//wentheart/sr_output/releases/download/v1.0/baseFusionOutput.zip
 ```
 <br>
-<br>
 The Real_ESRGAN and trans_ganModelFusion folders were miscellaneous folders that were used to verify the effectiveness of another fusion scheme, but were not ultimately adopted.<br>
 <br>
