@@ -3,7 +3,6 @@
 """
 import os
 import sys
-sys.path.append('.')
 import torch
 import torch.nn as nn
 import torch.optim as optim
@@ -71,7 +70,7 @@ def get_random_indices(total_size, sample_size=32):
 
 def main():
     # 创建保存目录
-    save_dir = './checkpoints/base_fusion_result'
+    save_dir = './checkpoints'
     os.makedirs(save_dir, exist_ok=True)
     
     device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
@@ -89,13 +88,11 @@ def main():
 
     # 初始化权重网络和优化器
     weight_net = AttentionWeightNet().to(device)
-    weight_net.load_state_dict(torch.load("./checkpoints/base_fusion_result/fusion_weights_epoch100.pth")['weight_net_state_dict'])
 
     optimizer = optim.Adam(weight_net.parameters(), lr=1e-4)
-    optimizer.load_state_dict(torch.load("./checkpoints/base_fusion_result/fusion_weights_epoch100.pth")['optimizer_state_dict'])
+
 
     scheduler = optim.lr_scheduler.ReduceLROnPlateau(optimizer, mode='max', factor=0.5, patience=5)
-    scheduler.load_state_dict(torch.load("./checkpoints/base_fusion_result/fusion_weights_epoch100.pth")['scheduler_state_dict'])
 
     criterion = CombinedLoss()
 
@@ -193,7 +190,7 @@ def main():
 
         # 每25个epoch保存一次模型
         if (epoch + 1) % 25 == 0:
-            save_path = os.path.join(save_dir, f'fusion_weights_epoch{epoch+1+100}.pth')
+            save_path = os.path.join(save_dir, f'fusion_weights_epoch{epoch+1}.pth')
             torch.save({
                 'epoch': epoch + 1,
                 'weight_net_state_dict': weight_net.state_dict(),
