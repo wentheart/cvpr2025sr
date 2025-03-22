@@ -13,6 +13,11 @@ model_zoo folder stores the parameter files of the fine-tuned baseline model.<br
 <br>
 The data folder is used to store datasets.
 <br>
+The test output image that has been submitted to Codalab can be downloaded from the following link:
+'''bash
+#!/bin/bash
+wget https://github.com//wentheart/sr_output/releases/download/v1.0/baseFusionOutput.zip
+'''
 <br>
 The Real_ESRGAN and trans_ganModelFusion folders were miscellaneous folders that were used to verify the effectiveness of another fusion scheme, but were not ultimately adopted.<br>
 <br>
