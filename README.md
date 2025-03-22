@@ -11,3 +11,8 @@ baseModelFusionNet.py is the main file of the fusion model, and the model used f
 <br>
 model_zoo folder stores the parameter files of the fine-tuned baseline model.<br>
 <br>
+The data folder is used to store datasets.
+<br>
+<br>
+The Real_ESRGAN and trans_ganModelFusion folders were miscellaneous folders that were used to verify the effectiveness of another fusion scheme, but were not ultimately adopted.<br>
+<br>
