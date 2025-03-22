@@ -133,5 +133,5 @@ def inference(mode):
 
 if __name__ == '__main__':
     # 设置要处理的数据集
-    mode = 'valid'  # 或 'test'
+    mode = 'test'  # 或 'test'
     inference(mode)
