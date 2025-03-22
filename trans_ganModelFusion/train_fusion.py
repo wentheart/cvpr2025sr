@@ -274,26 +274,25 @@ def train():
         avg_psnr = np.mean(psnr_list)
         
         # 创建保存目录
-        os.makedirs('./checkpoints/best_pth', exist_ok=True)
-        os.makedirs('./checkpoints', exist_ok=True)
+        os.makedirs('./checkpoints/realESRGAN/best_pth', exist_ok=True)
         
         # 保存最优模型
         if avg_psnr > best_psnr:
             best_psnr = avg_psnr
             torch.save(
                 model.state_dict(), 
-                './checkpoints/best_pth/best_fusion.pth'
+                './checkpoints/realESRGAN/best_pth/best_fusion.pth'
             )
         
         # 每20个epoch保存一次检查点
         if (epoch + 1) % 20 == 0:
             torch.save(
                 model.state_dict(),
-                f'./checkpoints/fusion_epoch_{epoch+1}.pth'
+                f'./checkpoints/realESRGAN/fusion_epoch_{epoch+1}.pth'
             )
             
         scheduler.step()
-        print(f'Epoch {epoch+1+60}/100, PSNR: {avg_psnr:.2f}')
+        print(f'Epoch {epoch+1}/100, PSNR: {avg_psnr:.2f}')
 
 if __name__ == '__main__':
     train()
