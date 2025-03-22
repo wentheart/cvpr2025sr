@@ -11,7 +11,7 @@ def inference():
     
     # 加载模型
     model = FusionModel(device).to(device)
-    model.load_state_dict(torch.load('./checkpoints/best_pth/best_fusion.pth'))
+    model.load_state_dict(torch.load('./checkpoints/realESRGAN/best_pth/best_fusion.pth'))
     model.eval()
     
     # 创建结果保存目录
