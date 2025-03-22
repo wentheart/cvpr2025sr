@@ -14,9 +14,12 @@ model_zoo folder stores the parameter files of the fine-tuned baseline model.<br
 The data folder is used to store datasets.
 <br>
 The test output image that has been submitted to Codalab can be downloaded from the following link:
-'''bash
+'''
 <br>
+```bash
+
 wget https://github.com//wentheart/sr_output/releases/download/v1.0/baseFusionOutput.zip
+```
 <br>
 '''
 <br>
