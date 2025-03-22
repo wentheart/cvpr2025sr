@@ -85,7 +85,7 @@ def inference(mode):
     dat_model.load_state_dict(torch.load("./model_zoo/team00_dat.pth"))
     swinir_model.load_state_dict(torch.load("./model_zoo/team00_swinir.pth"))
     rfdn_model.load_state_dict(torch.load("./model_zoo/team00_rfdn.pth"))
-    checkpoint = torch.load('./checkpoints/base_fusion_result/fusion_weights_best.pth')
+    checkpoint = torch.load('./checkpoints/fusion_weights_best.pth')
     weight_net.load_state_dict(checkpoint['weight_net_state_dict'])
     
     # 设置图像转换
