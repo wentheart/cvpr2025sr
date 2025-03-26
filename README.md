@@ -1,5 +1,6 @@
 # cvpr2025sr
 ## new
+The python version is 12.9 and the CUDA version is 12.6.<br><br>
 Put the LR data of the test set in ./data/DIV2K_test/LR folder.<br><br>
 You can easily generate SR images by running the following commands:
 ```
