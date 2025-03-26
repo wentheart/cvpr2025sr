@@ -1,4 +1,14 @@
 # cvpr2025sr
+## new
+Put the LR data of the test set in ./data/DIV2K_test/LR folder.<br><br>
+You can easily generate SR images by running the following commands:
+```
+python test.py --test_dir ./data/DIV2K_test_LR --model_id 27
+```
+The path of all output images uses the default path under the official framework.<br><br>
+
+
+## old(but also recmmonded to read)
 This github repository is used to submit 4x Super Resolution contests.
 
 inference.py files are generated with super-resolution images using the trained model.<br>
